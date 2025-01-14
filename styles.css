@@ -916,6 +916,7 @@ form {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+    justify-content: space-between;
   }
   
   .guide img {
@@ -1148,4 +1149,19 @@ form {
         flex-direction: column;
         gap: 10px;
     }    
+    .guide {
+        flex-direction: column;
+    }
+    .guide img {
+        width: 100%;
+    }
+}
+
+@media (max-width : 400px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    section, footer {
+        padding: 15px 5%;
+    }
 }
