@@ -671,7 +671,7 @@ form {
     gap: 10px;
 }
   
-input, select , textarea{
+.section_form input, select , textarea{
     padding: 10px;
     font-size: 14px;
     border: 1px solid #b2dfdb;
@@ -680,16 +680,16 @@ input, select , textarea{
     box-sizing: border-box;
 }
   
-textarea#message {
+.section_form textarea#message {
     resize: none;
     height: 150px !important;
 }
-input[type="checkbox"] {
+.section_form input[type="checkbox"] {
     width: auto;
     margin-right: 10px;
 }
   
-button {
+.section_form button {
     background-color:#cda760; /* Brownish button */
     color: #ffffff;
     padding: 10px 15px;
@@ -700,19 +700,19 @@ button {
     margin-top: 10px;
 }
   
-button:hover {
+.section_form button:hover {
     background-color: #8b613a; 
 }
   
-.form-checkbox {
+.section_form .form-checkbox {
     display: flex;
     align-items: center;
 }
   
-.form-checkbox label {
+.section_form .form-checkbox label {
     font-size: 12px;
 }
-.my-4{
+.section_form .my-4{
     margin-top: 1.5rem ;
     margin-bottom: 1.5rem;
 }
@@ -1132,3 +1132,20 @@ button:hover {
   .profile-card button:hover {
     background-color:  #8b613a;
   }
+
+
+@media (max-width : 800px) {
+    .features-amenities .list-icons {
+        grid-template-columns: repeat(auto-fit, minmax(150px , 1fr));
+    }
+    .about-propreties .list-icons {
+        grid-template-columns: repeat(auto-fit, minmax(150px , 1fr));
+    }
+    .logo {
+        width: 90px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }    
+}
