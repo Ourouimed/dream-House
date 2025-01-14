@@ -1,0 +1,1130 @@
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+@font-face {
+    font-family: Darius;
+    src: url(./darius/BwDarius-Black.woff);
+}
+ul li  {list-style: none;}
+::-webkit-scrollbar {
+    width: 5PX;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: #cda760
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    z-index : 10;
+    transition: .4s ease;
+}
+h1 , h2 , h3 {
+    font-family: Darius;
+}
+header.hide {
+    position: static !important;
+}
+
+header.sticky {
+    background: #004d40;
+    border-bottom: 4px solid #cda760;
+}
+
+header.sticky .logo {
+    width: 90px;
+}
+
+
+.side-menu {
+    position: fixed;
+    background: #004d40;
+    z-index: 10;
+    width: 400PX;
+    HEIGHT: 100%;
+    border-left: 4px solid #cda760;
+    RIGHT: 0;
+    TOP: 0;
+    PADDING: 20PX;
+    max-width: 90%;
+    transition: .4s ease;
+    transform: translateX(100%);
+}
+
+.side-menu.active {
+    transform: translateX(0);
+}
+
+.side-menu ul li a{
+    text-decoration: none;
+    color: #cca65f;
+    font-size: 18px;
+
+}
+button#closeMenu {
+    position: absolute;
+    right: 20PX;
+    TOP: 20PX;
+    FONT-SIZE: 18PX;
+    COLOR: #cca65f;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.side-menu ul {
+    position: relative;
+    top: 53PX;
+}
+.side-menu ul li a {
+    padding: 5px 0;
+    display: block;
+}
+
+.logo {
+    width: 150px;
+}
+
+
+#ShowMenu {
+    background: transparent;
+    border: 2px solid #cca65f;
+    width: 40px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cca65f;
+}
+
+#Home {
+    min-height: 100vh;
+    overflow : hidden;
+    width : 100%;
+    background : url('./image/image.png') no-repeat;
+    background-size : 100%;
+    background-position : center;
+    display : flex;
+    align-items : center;
+    padding : 20px 10%;
+}
+#Home > video {
+    position : absolute;
+    right : 0;
+    bottom:0;
+}
+
+#Home > .content {
+    position : relative;
+    transform : translateY(250px);
+    color:white;
+    z-index: 1;
+}
+
+#Home > .content h1 {
+    font-size : 38px;
+    font-family: Darius;
+    color: #cca65f;
+}
+
+#Home > .content p {
+    font-size : 25px;
+}
+
+#Home::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: .6;
+}
+@media (min-aspect-ratio :16/9 ) {
+    #Home > video{
+        width: 100%;
+        height: auto;
+    }
+    
+}
+@media (max-aspect-ratio :16/9 ) {
+    #Home > video{
+        width: auto;
+        height: 100%;
+    }
+    
+}
+section:not(#Home){
+    padding: 15px 10%;
+}
+
+
+
+/* Home Page */
+.luxury-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff; /* Arrière-plan blanc */
+}
+
+.luxury-section .content h3 {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.luxury-section .content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+.luxury-section .content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+.luxury-section .content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.luxury-section .content .btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #004d40;
+    color: #fff;
+}
+
+.team-section h3 {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.team-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #cca65f;
+}
+
+.team-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.image-content img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+
+/* Section: Dream Home */
+.dream-home-section{
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.dream-home-section h3 {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.dream-home-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #222;
+}
+
+.dream-home-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px auto 20px;
+    max-width: 600px;
+    color: #555;
+}
+
+.dream-home-section .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dream-home-section .btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+/* testimontals */
+#testimonials {
+    background-color: #f9f9f9;
+}
+
+#testimonials > h3 {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#testimonials > h1 {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.testi-cards-container {
+    position: relative;
+    overflow: hidden; 
+}
+
+.testi-cards {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    background: white;
+    transition: .4s ease;
+    flex: 0 0 33.33%; 
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-header > img {
+    width: 60px;
+    border-radius: 50%;
+    border: 2.4px solid #cca65f;
+    padding: 5px;
+}
+
+.user-info > .name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.user-info > .username {
+    color: #888787;
+}
+
+.quot-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #cca65f;
+    font-size: 44px;
+}
+
+#testimonials button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#testimonials button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*Proprety sale */
+#property-sale{
+    text-align: center;
+    padding: 50px 20px;
+    background: #004d40;
+    color: white;
+}
+
+
+#property-sale h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #cca65f;
+}
+
+#property-sale p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px auto 20px;
+    max-width: 600px;
+}
+
+#property-sale .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#property-sale .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+/* Footer */
+footer{
+    color: white;
+    background: #000;
+    border-top: 4px solid #cca65f;
+    padding: 0 10%;
+    background: #004d40;
+}
+.footer-top {
+    
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 10px;
+}
+.footer-top .foot-div h3 {
+    margin-bottom: 7px;
+    color: #cca65f;
+    font-size: 25px;
+}
+
+.footer-bottom {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}   
+
+
+.foot-div > img {
+    width: 120px;
+}
+
+#quick-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    margin-bottom: 5px;
+    transition: .4s ease
+}
+#quick-links li a:hover {
+    transform: translateX(10px);
+    color: #cca65f;
+}
+
+#contact-info li {
+    padding: 5px;
+}
+
+#contact-info li i {
+    font-size: 20px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.social-icons li a {
+    display: block;
+    height: 35px;
+    aspect-ratio: 1;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #032922;
+    transition: .4s ease;
+}
+
+.social-icons li a:hover{
+    background:#cca65f;
+    color: #032922;
+}
+
+.copyright span {
+    font-weight: bold;
+    color:#cca65f;
+}
+
+
+/* Buy sec */
+
+.buy-sec {
+    text-align: center;
+    background-color: #004d40;
+    color: #fff;
+}
+
+.buy-sec h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #cca65f;
+}
+
+.buy-sec p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px auto 20px;
+    max-width: 600px;
+}
+
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+    gap: 10px;
+    background-color: #f9f9f9;
+}
+.project {
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 6px #bcc9cc4d;
+}
+.project .project-info {
+    padding: 10px;
+}
+.project-info h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.project .project-img img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.project a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+    transition: .4s ease;
+}
+
+.project a:hover{
+    background: black;
+    color: white;
+}
+
+
+.text_buy{
+    background-color: #004d40;
+    color: white; 
+    text-align: center;
+    padding: 40px 20px;
+}
+.text_buy h2{
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #888;
+}
+.text_buy h1 {
+    font-size: 28px;
+    margin: 10px 0 20px;
+    color: #cca65f;
+}
+.text_buy p {
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.image_buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #004d40;
+    position: relative;
+}
+.image_buy img {
+    display: block;
+    height: auto;
+    border-radius: 10px;
+    width: 1000px;
+    aspect-ratio: 16 / 9;
+    margin: auto;
+    max-width: 90%;
+}
+
+
+
+/*FORMILAIRE BUY PAGE */
+.section_form{
+    background-color: #004d40; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+.form_buy {
+    padding: 30px;
+    width: 100%;
+    max-width: 650px;
+
+}
+  
+.form_buy h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+  
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+  
+input, select , textarea{
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #b2dfdb;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+textarea#message {
+    resize: none;
+    height: 150px !important;
+}
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+  
+button {
+    background-color:#cda760; /* Brownish button */
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+  
+button:hover {
+    background-color: #8b613a; 
+}
+  
+.form-checkbox {
+    display: flex;
+    align-items: center;
+}
+  
+.form-checkbox label {
+    font-size: 12px;
+}
+.my-4{
+    margin-top: 1.5rem ;
+    margin-bottom: 1.5rem;
+}
+
+/*PAGE CONTACT*/
+
+.background-section {
+    position: relative;
+    width: 100%;
+    height: 442px; ; 
+    background-image: url(./Contact/CONTACT\ IMG.jpg); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    object-fit: cover; 
+    color:#cda760 ;   
+  }
+  .background-section::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }  
+  .text-overlay {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+  }
+  
+  .text-overlay h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    color: #cca65f;
+  }
+  
+  .text-overlay h3 {
+    font-size: 18px;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+  }
+  
+  .text-overlay p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  /* ABOUT US PAGE CSS*/
+  .all-section{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+  }
+  .team-sec {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .team-sec h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    position: relative;
+    width: 230px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: scale(1.05);
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .member-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .member-info .role {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0.8;
+  }
+  
+  .member-info h3 {
+    font-size: 20px;
+    margin: 5px 0 0;
+  }
+
+
+
+/* About us */
+ .all-section{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+  }
+  .team-sec {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .team-sec h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    position: relative;
+    width: 230px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: scale(1.05);
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .member-info {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .member-info .role {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+    opacity: 0.8;
+  }
+  
+  .member-info h3 {
+    font-size: 20px;
+    margin: 5px 0 0;
+  }
+
+ /* AREA GUIDE*/
+ .area-guides {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+  
+  .guide {
+    display: flex;
+    margin-bottom: 30px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .guide img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .guide-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .guide-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #222;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .guide-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+
+
+
+
+
+  .single-image img {
+    width: 1100px;
+    max-width: 90%;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Deuxième div : Liste des icônes */
+.list-icons {
+    display: grid;
+    gap: 20px;
+    list-style: none;
+    margin: 20px 0;
+}
+.list-icons li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+.list-icons li .t2 {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+.list-icons li .t1 {
+    color: #cda760;
+}
+.list-icons li > div {
+    text-align: initial;
+}
+.list-icons li i {
+    color: #cda760;
+    font-size: 44px;
+}
+/* About Propreties */
+.about-propreties{
+    background: #fff;
+}
+.about-propreties .list-icons {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Troisième div : Features & Amenities */
+.features-amenities {
+    background: #f9f9f9;
+}
+.features-amenities  .list-icons {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.features-amenities .list-icons li {
+    justify-content: center;
+}
+
+.features-amenities h2, .description h2 , .section-gallery {
+    text-align: center;
+}
+
+/* Quatrième div : Description */
+.description {
+    background: #fff;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    text-align: justify;
+}
+
+.description p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Cinquième div : Galerie d'images */
+.section-gallery {
+    background: #f9f9f9;
+}
+.section-gallery .gallery {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(250px , 1fr));
+    gap: 10px;
+}
+
+.section-gallery img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Section contact Seller */
+.contact-seller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-seller .contact-div > img {
+    width: 200px;
+    border-radius: 50%;
+    padding: 10px;
+    border: 6px solid #004d40;
+}
+
+.contact-btns {display: flex;align-items: center;gap: 5px;}
+.contact-div .contact-btn {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+    transition: .4s ease;
+}
+.contact-div .contact-btn:hover {
+    background: #000;
+    color: white;
+}
+
+
+
+
+.contact-div .email-link {
+    color: #686868;
+    text-decoration: none;
+}
+
+
+
+.profile-card {
+    background: white;
+    border-radius: 15px;
+    width: 320px;
+    padding: 20px;
+    box-shadow: -6px 6px 10px rgba(0, 0, 0, 0.1), 
+                6px 6px 10px rgba(0, 0, 0, 0.1), 
+                0 6px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  .profile-card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  .profile-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+  }
+  .profile-card h4 {
+    font-size: 1rem;
+    color: #777;
+    margin: 5px 0;
+  }
+  .profile-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 10px 0 20px;
+  }
+  .profile-card button {
+    background-color:#cda760;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .profile-card button:hover {
+    background-color:  #8b613a;
+  }
