@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./fonts/darius/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header style="
+    background: #004d40;
+    border-bottom: 4px solid #cda760;
+    position: sticky;
+  ">
+    <img class="logo" src="../image/brand.png" style="width: 90px;">
+    <button id="ShowMenu"><i class="fa-solid fa-bars"></i></button>
+  </header>
+  <div class="side-menu">
+    <button id="closeMenu">
+        <i class="fa-solid fa-x"></i>
+    </button>
+    <ul>
+        <li><a href="../Buy/index.html">Buy</a></li>
+        <li><a href="../Sell/index.html">Sell</a></li>
+        <li><a href="../Aboutus/index.html">About us</a></li>
+        <li><a href="../Areaguide/index.html">Area Guide</a></li>
+        <li><a href="../Contact/index.html">Contact</a></li>
+    </ul>
+</div>
+    <div class="background-section">
+        <div class="text-overlay">
+          <h3>WE'RE HERE TO HELP YOU</h3>
+          <h1>Contact Us</h1>
+          <p>
+            Navigating the Dubai real estate market can be complex, but at DREAM HOUSE, our experienced and dedicated team is here to make the process effortless. We are committed to guiding you through every step, ensuring you find your dream property with confidence and ease.
+          </p>
+          <p>Contact us through the form below, and we’ll get back to you shortly! <br> Let DREAM HOUSE turn your Dubai property journey into a seamless and successful experience.</p>
+        </div>
+      </div>
+      <div class="section_form">
+        <div class="form_buy">
+            <h2>Your Details</h2>
+            <form action="https://getform.io/f/aqoopjea" method="POST">
+                <input type="hidden" name="_gotcha" style="display:none !important">
+                <div class="form-group">
+                    <div class="form-row">
+                        <input type="text" name="first_name" placeholder="First Name" required>
+                        <input type="text" name="last_name" placeholder="Last Name"required>
+                    </div>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="Phone_number" placeholder="Enter your phone number" required >
+                    <div class="form-row">
+                        
+                          <input type="date" id="preffered-date" name="preffered-date" placeholder="preffered time*" required>
+                            <select name="preffered-time" required>
+                                <option value="">Please select</option>
+                                <option value="Morning">Morning</option>
+                                <option value="Afternoon">Afternoon</option>
+                                <option value="Evening">Evening</option>
+                            </select>
+                        
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                    </div>
+                    <div class="form_checkbox">
+                        <label>
+                            <input type="checkbox" name="communications">
+                            I agree to receive other communications from DREAM HOUSE Brokers.
+                        </label>
+                    </div>
+                    <div class="form_checkbox">
+                        <label>
+                        <input type="checkbox" name="data_processing" required>
+                        I agree to allow DREAM HOUSE to store and process my personal data*.
+                        </label>
+                    </div> 
+                </div>
+                <button type="submit">SUBMIT</button>
+            </form>    
+        </div>
+      </div>  
+      <footer>
+        <div class="footer-top">
+            <div class="foot-div">
+                <h3>About us</h3>
+                <p>Dream House is a leading real estate agency in Dubai, specializing in luxury properties, apartments, and commercial spaces. We help you find your perfect home or investment in the heart of the UAE.
+                </p>
+            </div>
+            <div class="foot-div">
+                <h3>Quick links</h3>
+                <ul id="quick-links">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../buy/index.html">buy</a>
+                    </li>
+                    <li>
+                        <a href="../Sell/index.html">sell</a>
+                    </li>
+                    <li>
+                        <a href="../Aboutus/index.html">About us</a>
+                    </li>
+                    <li>
+                        <a href="../Contact/index.html">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="foot-div">
+                <h3>Contact info</h3>
+                <ul id="contact-info">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Sheikh Zayed Road - Marina de Dubaï - Dubaï - Émirats Arabes Unis . 
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        +21245678868
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        dream.02.house@gmail.com
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2025 All Right Reserved <span> Dream House</span>
+            </div>
+            <ul class="social-icons">
+                <li>
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-brands fa-x"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+      <script src="../script/header.js"></script>
+      <script src="../script/menu.js"></script>
+</body>
+</html>
