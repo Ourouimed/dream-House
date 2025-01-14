@@ -1134,6 +1134,44 @@ form {
     background-color:  #8b613a;
   }
 
+.testimonials-grid{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+}
+.card .text{
+    font-size: 1rem;
+    color: #333;
+    margin: 20px 0;
+}
+.card .info{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.card .info .pic img{
+    border-radius: 50%;
+    width: 50PX;
+    height: 50px;
+    margin-right: 15px;
+}
+.card .name{
+    text-align: center;
+    justify-content: center;
+}
+.card .name p{
+    font-weight: bold;
+    color: #000;
+}
 
 @media (max-width : 800px) {
     .features-amenities .list-icons {
@@ -1162,6 +1200,6 @@ form {
         grid-template-columns: 1fr;
     }
     section, footer {
-        padding: 15px 5%;
+        padding: 15px 5% !important;
     }
 }
