@@ -301,6 +301,8 @@ section:not(#Home){
 /* testimontals */
 #testimonials {
     background-color: #f9f9f9;
+    overflow: hidden;
+    position: relative;
 }
 
 #testimonials > h3 {
@@ -319,85 +321,78 @@ section:not(#Home){
     text-align: center;
 }
 
-.testi-cards-container {
-    position: relative;
-    overflow: hidden; 
-}
 
-.testi-cards {
-    display: flex;
-    gap: 10px;
-    transition: transform 0.5s ease;
+.testimonial {
+    padding: 30px 0;
+    overflow: hidden;
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
 }
+  .swiper-wrapper {gap: 10px;}
 
-.card {
-    padding: 20px;
-    border-radius: 8px;
-    position: relative;
+  .testimonial .slide {
     background: white;
-    transition: .4s ease;
-    flex: 0 0 33.33%; 
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
 }
-
-.card-header {
+.card .text{
+    font-size: 1rem;
+    color: #333;
+    margin: 20px 0;
+}
+.slide .info{
     display: flex;
     align-items: center;
-    gap: 4px;
+    margin-top: 20px;
 }
-
-.card-header > img {
-    width: 60px;
+.slide .info .pic img{
     border-radius: 50%;
-    border: 2.4px solid #cca65f;
-    padding: 5px;
+    width: 50PX;
+    height: 50px;
+    margin-right: 15px;
 }
-
-.user-info > .name {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.user-info > .username {
-    color: #888787;
-}
-
-.quot-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #cca65f;
-    font-size: 44px;
-}
-
-#testimonials button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    z-index: 10;
-    display: flex;
+.slide .name{
+    text-align: center;
     justify-content: center;
-    align-items: center;
+}
+.slide .name p{
+    font-weight: bold;
+    color: #000;
 }
 
-.prev {
-    left: 10px;
-}
 
-.next {
-    right: 10px;
-}
 
-#testimonials button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
+  /* swiper button css */
+  .nav-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: translateY(30px);
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+  }
+  .nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .nav-btn::after,
+  .nav-btn::before {
+    font-size: 20px;
+    color: #fff;
+  }
+  .swiper-pagination-bullet {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #4070f4;
+  }
+
+
+
+
+
+
 
 /*Proprety sale */
 #property-sale{
@@ -1134,44 +1129,7 @@ form {
     background-color:  #8b613a;
   }
 
-.testimonials-grid{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-.card{
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    padding: 20px;
-    text-align: center;
-}
-.card .text{
-    font-size: 1rem;
-    color: #333;
-    margin: 20px 0;
-}
-.card .info{
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-.card .info .pic img{
-    border-radius: 50%;
-    width: 50PX;
-    height: 50px;
-    margin-right: 15px;
-}
-.card .name{
-    text-align: center;
-    justify-content: center;
-}
-.card .name p{
-    font-weight: bold;
-    color: #000;
-}
+
 
 @media (max-width : 800px) {
     .features-amenities .list-icons {
