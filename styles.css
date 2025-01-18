@@ -1,8 +1,9 @@
-*{margin: 0;padding: 0;box-sizing: border-box;font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
     font-family: Darius;
     src: url(./darius/BwDarius-Black.woff);
 }
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: "Poppins", serif;}
 ul li  {list-style: none;}
 ::-webkit-scrollbar {
     width: 5PX;
@@ -307,7 +308,7 @@ section:not(#Home){
 
 #testimonials > h3 {
     font-size: 1.2rem;
-    color: #ccc;
+    color: #888;
     margin-bottom: 10px;
     text-transform: uppercase;
     text-align: center;
@@ -765,7 +766,8 @@ form {
     font-size: 16px;
     line-height: 1.6;
   }
-  /* ABOUT US PAGE CSS*/
+
+/* ABOUT US PAGE CSS*/
   .all-section{
     margin: 0;
     font-family: Arial, sans-serif;
@@ -832,70 +834,7 @@ form {
 
 
 
-/* About us */
- .all-section{
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333;
-  }
-  .team-sec {
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .team-sec h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
-  
-  .team-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .team-member {
-    position: relative;
-    width: 230px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .team-member:hover {
-    transform: scale(1.05);
-  }
-  
-  .team-member img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .member-info {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    width: 100%;
-    padding: 15px;
-    text-align: left;
-  }
-  
-  .member-info .role {
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0;
-    opacity: 0.8;
-  }
-  
-  .member-info h3 {
-    font-size: 20px;
-    margin: 5px 0 0;
-  }
+
 
  /* AREA GUIDE*/
  .area-guides {
@@ -1115,17 +1054,16 @@ form {
     color: #555;
     margin: 10px 0 20px;
   }
-  .profile-card button {
+  .profile-card a {
     background-color:#cda760;
     color: white;
-    border: none;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 1rem;
-    cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.3s ease;
   }
-  .profile-card button:hover {
+  .profile-card a:hover {
     background-color:  #8b613a;
   }
 
