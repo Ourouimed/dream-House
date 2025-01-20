@@ -21,7 +21,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
-    z-index : 10;
+    z-index : 11;
     transition: .4s ease;
 }
 h1 , h2 , h3 {
@@ -44,7 +44,7 @@ header.sticky .logo {
 .side-menu {
     position: fixed;
     background: #004d40;
-    z-index: 10;
+    z-index: 11;
     width: 400PX;
     HEIGHT: 100%;
     border-left: 4px solid #cda760;
@@ -241,12 +241,37 @@ section:not(#Home){
     margin: 10px 0;
 }
 
+
+.image-content {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+
+
+.team-section .image-content::before {
+    content: '';
+    position: absolute;
+    background: #0000005c;
+    display: block;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+
 .image-content img {
     width: 100%;
-    max-width: 800px;
-    border-radius: 10px;
-    margin-top: 20px;
+    position: relative;
+    display: block;
 }
+
+
 
 
 
@@ -326,7 +351,7 @@ section:not(#Home){
 .testimonial {
     padding: 30px 0;
     overflow: hidden;
-    width: 500px;
+    width: 650px;
     max-width: 100%;
     margin: auto;
 }
@@ -334,6 +359,7 @@ section:not(#Home){
 
   .testimonial .slide {
     background: white;
+    cursor : pointer;
     padding: 15px;
     border-radius: 7px;
     box-shadow: 0 4px 6px rgb(0 0 0 / 10%);
@@ -626,6 +652,16 @@ footer{
     aspect-ratio: 16 / 9;
     margin: auto;
     max-width: 90%;
+}
+
+.image_buy img::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: black;
+    z-index: 1;
+    display: block;
+    top: 0;
 }
 
 
@@ -926,7 +962,9 @@ form {
 .about-propreties .list-icons {
     grid-template-columns: repeat(2, 1fr);
 }
-
+.about-propreties > h2 {
+    text-align: center;
+}
 /* Troisième div : Features & Amenities */
 .features-amenities {
     background: #f9f9f9;
@@ -1089,13 +1127,30 @@ form {
     .guide img {
         width: 100%;
     }
+    .profile-card , .team-member{width: 100%;}
 }
-
+@media (max-width : 650px){
+    h1{
+        font-size: 1.5rem !important;
+    }
+    h2{
+        font-size : 1.2rem !important;
+    }
+    h3{
+        font-size: 1rem !important;
+    }
+}
 @media (max-width : 400px) {
     .projects-grid {
         grid-template-columns: 1fr;
     }
     section, footer {
         padding: 15px 5% !important;
+    }
+    #Home > .content h1 {
+        font-size: 24px !important;
+    }
+    #Home > .content p {
+        font-size: 18px !important;
     }
 }
