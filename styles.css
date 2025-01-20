@@ -355,7 +355,7 @@ section:not(#Home){
     max-width: 100%;
     margin: auto;
 }
-  .swiper-wrapper {gap: 10px;}
+  .swiper-wrapper {gap: 10px;align-items: center;}
 
   .testimonial .slide {
     background: white;
